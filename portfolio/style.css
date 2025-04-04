@@ -1,0 +1,175 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #1d1d1d;
+}
+
+header {
+    background: #1d1d1d;
+    color: white;
+    text-align: left;
+    padding: 5% 10%;
+    height: 190px;
+    margin-top: 0;
+    margin-bottom: auto;
+    font-size: 30px;
+    line-height: 0.5;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+
+nav {
+    text-align: center; /* Centers the inline-flex container */
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: inline-flex; /* Container shrinks to fit content */
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #3a3838; /* Optional: Match parent bg */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 10px;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1250px;
+    margin: auto;
+    margin-bottom: 7%;
+    margin-top: 2%;
+    width: 100%;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;          /* Makes children sit side-by-side */
+    gap: 10%;             /* Space between text and image */
+    max-width: 900px;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+/* Text container */
+.about-text {
+    flex: 1;              /* Takes available space */
+}
+
+/* Image container */
+.about-image {
+    flex: 1;              /* Takes available space */
+    max-width: 400px;     /* Prevents image from growing too large */
+}
+
+#about img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive behavior - stacks on mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-image {
+        max-width: 100%;
+    }
+}
+
+#about p {
+    font-size: 20px;
+}
+
+
+
+.clickable-card {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make anchor fill container */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20% 5%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 100%;
+    height: 90%;
+    font-size: larger;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+#skills {
+    margin-top: 5%;
+}
+
+#skills div {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5% 2%;
+}
+
+#skills img {
+    height: 90px;
+}
+
+#contact {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1d1d1d;
+    color: white;
+}
